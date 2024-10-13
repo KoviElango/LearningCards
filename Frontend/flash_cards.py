@@ -1,35 +1,14 @@
 import streamlit as st
+from generate_questions import generate_questions_from_text
 
 def question_list(questions):
     """
-    Display a list of predefined questions with hidden answers revealed on hover.
+    Display a list of predefined questions about the document.
     """
-    st.subheader("Generated Questions")
-    for i, question in enumerate(questions):
-        question_text = question['question']
-        answer_text = question['answer']
+    st.subheader(questions)
+    
 
-        # CSS for hover effect
-        st.markdown(f"""
-        <style>
-        .answer{i} {{
-            color: transparent;
-            background-color: transparent;
-            transition: color 0.4s ease;
-        }}
-        .answer-container{i}:hover .answer{i} {{
-            color: white;
-        }}
-        .answer-container{i} {{
-            margin-bottom: 20px;
-        }}
-        </style>
-        """, unsafe_allow_html=True)
 
-        # Display the question and the hidden answer with hover effect
-        st.markdown(f"""
-        <div class="answer-container{i}">
-            <p><strong>Question {i + 1}: {question_text}</strong></p>
-            <p class="answer{i}"><em>Answer: {answer_text}</em></p>
-        </div>
-        """, unsafe_allow_html=True)
+
+
+
