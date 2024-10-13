@@ -1,18 +1,14 @@
 import streamlit as st
+from generate_questions import generate_questions_from_text
 
-def question_list():
+def question_list(questions):
     """
     Display a list of predefined questions about the document.
     """
-    st.subheader("Questions")
-    questions = [
-        "What is the main topic of this document?",
-        "Who is the target audience for this content?",
-        "What are the key findings or conclusions?",
-        "Are there any important dates or deadlines mentioned?",
-        "What are the main arguments presented in the document?"
-    ]
+    st.subheader(questions)
     
-    # Display numbered questions
-    for i, question in enumerate(questions, 1):
-        st.write(f"{i}. {question}")
+
+
+
+
+

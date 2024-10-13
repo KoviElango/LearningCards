@@ -3,7 +3,6 @@ import streamlit as st
 from PyPDF2 import PdfReader
 from collections import Counter
 import spacy
-
 from rake_nltk import Rake
 import nltk
 

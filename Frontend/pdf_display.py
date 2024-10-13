@@ -15,5 +15,6 @@ def pdf_viewer(uploaded_file):
         for i, page in enumerate(pdf.pages):
             st.write(f"Page {i + 1}")
             st.write(page.extract_text())
+            return page.extract_text()
     else:
         st.write("Please upload a PDF file.")

@@ -3,6 +3,7 @@ import streamlit as st
 from topic_extractor import topic_extractor
 from pdf_display import pdf_viewer
 from flash_cards import question_list
+from generate_questions import generate_questions_from_text
 
 def main():
     # Set up the Streamlit page configuration
@@ -21,11 +22,12 @@ def main():
 
     # Populate the second column with the PDF viewer
     with col2:
-        pdf_viewer(uploaded_file)
+        extracted_text = pdf_viewer(uploaded_file)
 
     # Populate the third column with the question list
     with col3:
-        question_list()
+        questions = generate_questions_from_text (extracted_text, 5)
+        question_list(questions)
 
 # Ensure the main function is only run when this script is executed directly
 if __name__ == "__main__":
