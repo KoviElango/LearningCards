@@ -16,10 +16,10 @@ def pdf_viewer(uploaded_file):
         # Pagination controls
         col1, col2 = st.columns([1, 5])
         with col1:
-            if st.button("Previous") and page_number > 0:
+            if st.button("◄") and page_number > 0:
                 st.session_state.page_number -= 1  # Go to the previous page
         with col2:
-            if st.button("Next") and page_number < total_pages - 1:
+            if st.button("►") and page_number < total_pages - 1:
                 st.session_state.page_number += 1  # Go to the next page
 
         # Display the current page
