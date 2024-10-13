@@ -9,10 +9,10 @@ def main():
     Main function to run the PDF Processing Tool.
     """
     st.set_page_config(layout="wide")
-    st.title("PDF Processing Tool")
+    st.sidebar.title("PDF Processing Tool")
 
-    # Upload PDF and display the content
-    uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
+    # Upload PDF and display the content in the sidebar
+    uploaded_file = st.sidebar.file_uploader("Choose a PDF file", type="pdf")
     
     # Check if the uploaded file has changed
     if uploaded_file is not None:
