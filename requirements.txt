@@ -1,3 +1,4 @@
+# General
 streamlit
 PyPDF2
 spacy
