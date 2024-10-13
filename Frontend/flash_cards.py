@@ -18,7 +18,7 @@ def question_list(questions):
             transition: color 0.4s ease;
         }}
         .answer-container{i}:hover .answer{i} {{
-            color: Yellow;
+            color: Red;
         }}
         .answer-container{i} {{
             margin-bottom: 20px;
