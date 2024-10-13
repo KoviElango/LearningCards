@@ -18,7 +18,7 @@ def question_list(questions):
             transition: color 0.4s ease;
         }}
         .answer-container{i}:hover .answer{i} {{
-            color: white;
+            color: Yellow;
         }}
         .answer-container{i} {{
             margin-bottom: 20px;
@@ -30,6 +30,6 @@ def question_list(questions):
         st.markdown(f"""
         <div class="answer-container{i}">
             <p><strong>Question {i + 1}: {question_text}</strong></p>
-            <p class="answer{i}"><em>Answer: {answer_text}</em></p>
+            <p>Answer: <span class="answer{i}"><em>{answer_text}</em></span></p>
         </div>
         """, unsafe_allow_html=True)

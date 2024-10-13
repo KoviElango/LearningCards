@@ -31,7 +31,7 @@ def main():
             col1, col2, col3 = st.columns(3)
             
             with col1:
-                st.write("**Topics Extracted**")
+                st.write("_This is the list of Key Topics from the page_")
                 topics = extract_topics(extracted_text)
                 display_topics(topics)
             
